@@ -11927,8 +11927,8 @@ Standard deviation of prices: $165,171.13
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
 <p>Increase in <code>RM</code> feature increases <code>MEDV</code>. If the house contains more rooms, it needs larger area, so that's valued more.</p>
-<p>Increase in <code>LSTAT</code> should decrease <code>MEDV</code> since if working poor increases, that indicates the average house values are affordable for them meaning individula house's values are low.</p>
-<p>Increase in <code>PTRATIO</code> should increase <code>MEDV</code> since I think it is a rich area if teachers can take care smaller number of children.</p>
+<p>Increase in <code>LSTAT</code> should decrease <code>MEDV</code> since if working poor increases, that indicates the average house values are affordable for them meaning individula house's values gets lower.</p>
+<p>Decrease in <code>PTRATIO</code> should increase <code>MEDV</code> since that means teachers can take care smaller number of children and indicates they have a good education.</p>
 
 </div>
 </div>
@@ -12135,7 +12135,7 @@ I would say this model successfully captures the variation of the target variabl
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-The benefit of splitting data into train and testing data set is to avoid overfitting and make sure the model can make predictions for new data. If we don't have a testing data, we don't have a way to evaluate if the model can make good predictions for data the model has not seen before.</p>
+The benefit of splitting data into train and testing data set is to avoid overfitting and make sure the model can make predictions for new data. If we don't have a testing data, we don't have a way to evaluate if the model can make good predictions for unseen data.</p>
 
 </div>
 </div>
@@ -14554,7 +14554,7 @@ YII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong> When the maximum depth is 1, the model is suffered from high bias since training score is low. This means the model doesn't extract correct information from the test data to make a prediction. When the maximum depth is 10, the model is suffered from high variance. It's almost overfitted to the training data. This is observed by red dot in the graph; it's almost 1.0. However, validation score is not close to the training score. This concludes the model overfits to the training data and when it faces new data, it fails to make a good prediction.</p>
-<p>In general, graph suggests when maximum depth is low, the model sufferes from high bias and when the maximum depth goes up, the model is suffered from high variance.</p>
+<p>Overall, the graph suggests when maximum depth is low, the model sufferes from high bias and when the maximum depth goes up, the model is suffered from high variance.</p>
 
 </div>
 </div>
@@ -14574,7 +14574,7 @@ YII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> I think the maximum depth of 4 makes the best generalized model. This is because the green dot at the maximum depth at 4 has highest validation score. Since the model shows highest performance at maximum depth of 4, I think the model can makes better predictions to unseen data than the model with other maximum depth values.</p>
+<p><strong>Answer: </strong> I think the maximum depth of 4 makes the best generalized model. This is because the validation score at the maximum depth at 4 is the best. Since the model shows highest performance at maximum depth of 4, I think the model can makes better predictions to unseen data with maximum depth of 4.</p>
 
 </div>
 </div>
@@ -14626,7 +14626,7 @@ YII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> k-fold cross-validation technique is to create k sets of train and test data. First, partition the entire test data into k sets. Second, train the model k times with using each set from k sets as a test data and the rest for training data. This technique provides benefits for grid search since it provides more data to check which parameter is the best for the model.</p>
+<p><strong>Answer: </strong> k-fold cross-validation technique is to create k sets of train and test data. First, partition the entire test data into k sets. Second, train the model k times with using each set as a test data and the rest for training data. This technique provides benefits for grid search since it provides more data to test which parameter is the best for the model.</p>
 
 </div>
 </div>
@@ -14846,7 +14846,7 @@ Predicted selling price for Client 3&#39;s home: $942,666.67
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> I would suggest selling each house for $391,183.33, $189,123.53, $942,666.67 respectively. The features for Client 2's house indicates the house in low demand area. Therefore, the price is lower than the mean. In contrast, Client 3's features indicate the house is in high demand area. Therefore, the price is higher than the mean.</p>
+<p><strong>Answer: </strong> I would suggest selling each house for \$391,183.33, \$189,123.53, \$942,666.67 respectively. The feature for the Client 1 indicates it is a middle class house. Therefore, it is close to the mean. The features for Client 2's house indicates the house in in low demand area because of high Neighborhood poverty level and high Student-teacher ratio. Therefore, the price is lower than the mean. In contrast, Client 3's features indicate the house is in high demand area. Therefore, the price is higher than the mean.</p>
 
 </div>
 </div>
